@@ -39,7 +39,7 @@ export const cartReducer = (state = initialState, action) => {
                 }
             }
 
-        case types.limipiarCarrito: 
+        case types.limpiarCarrito: 
             return {
                 ...state,
                 cart: []
