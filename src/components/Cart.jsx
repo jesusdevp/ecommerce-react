@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import { addProductCart, deleteProductCart, limipiarCarrito } from '../redux/actions/cartActions'
+import { addProductCart, deleteProductCart } from '../redux/actions/cartActions'
 
 export const Cart = () => {
 
@@ -40,7 +40,6 @@ export const Cart = () => {
 
     const handleFinalizarCompra = () => {
         history.push('/finalizar')
-        dispatch(limipiarCarrito())
     }
 
     const handleHome = () => {

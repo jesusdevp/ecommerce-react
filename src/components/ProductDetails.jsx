@@ -18,32 +18,38 @@ export const ProductDetails = ({ product }) => {
 
     return (
         <>
-            <div className='mb-3'>
+            {Object.keys(product).length > 0 &&
+                <>
+                    <div className='mb-3'>
 
-                <button onClick={handleRegresar} className='btn btn-info w-12' style={{ width: '15%' }}>
-                    Regresar
-                </button>
-            </div>
-            <div className="col-md-6">
-                <img
-                    src={Object.keys(product).length > 0 ? product.images[0] : ''}
-                    alt={product.title}
-                    height='400px'
-                    width='400px'
-                />
+                        <button onClick={handleRegresar} className='btn btn-info w-12' style={{ width: '15%' }}>
+                            Regresar
+                        </button>
+                    </div>
+                    <div className="col-md-6">
+                        <img
+                            src={product.images[0]}
+                            alt={product.title}
+                            height='400px'
+                            width='400px'
+                        />
 
-            </div>
-            <div className="col-md-6">
-                <h4 className='text-uppercase'>
-                    {Object.keys(product).length > 0 && product.category.name}
-                </h4>
-                <h1 className='display-5'>{product.title}</h1>
-                <h3 className='display-6 fw-bold my-4' > $ {product.price}</h3>
-                <p className='lead'>{product.description}</p>
-                <button onClick={() => handleAddProduct(product)} className='btn btn-success'>Agregar al carrito</button>
-                <NavLink to='/cart' className="btn btn-primary ms-2 px-3 py-2">Ir al carrito</NavLink>
+                    </div>
+                    <div className="col-md-6">
+                        <h4 className='text-uppercase'>
+                            {product.category.name}
+                        </h4>
+                        <h1 className='display-5'>{product.title}</h1>
+                        <h3 className='display-6 fw-bold my-4' > $ {product.price}</h3>
+                        <p className='lead'>{product.description}</p>
+                        <button onClick={() => handleAddProduct(product)} className='btn btn-success'>Agregar al carrito</button>
+                        <NavLink to='/cart' className="btn btn-primary ms-2 px-3 py-2">Ir al carrito</NavLink>
 
-            </div>
+                    </div>
+                </>
+
+            }
+
         </>
     )
 }

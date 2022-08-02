@@ -18,10 +18,11 @@ export const ProductosContainer = ({ data, filter, setFilter }) => {
         <>
             <div className='buttons d-flex justify-content-center mb-5 pb-5'>
                 <button className='btn btn-primary me-2' onClick={() => setFilter(Object.keys(data).length > 0 ? data : [])} >Todo</button>
-                <button className='btn btn-primary me-2' onClick={() => filterProduct("Shoes")} >Zapatos</button>
-                <button className='btn btn-primary me-2' onClick={() => filterProduct("Furniture")} >Muebles</button>
-                <button className='btn btn-primary me-2' onClick={() => filterProduct("Clothes")} >Ropa</button>
                 <button className='btn btn-primary me-2' onClick={() => filterProduct("Electronics")} >Electronica</button>
+                <button className='btn btn-primary me-2' onClick={() => filterProduct("Furniture")} >Muebles</button>
+                <button className='btn btn-primary me-2' onClick={() => filterProduct("Others")} >Otros</button>
+                <button className='btn btn-primary me-2' onClick={() => filterProduct("Clothes")} >Ropa</button>
+                <button className='btn btn-primary me-2' onClick={() => filterProduct("Shoes")} >Zapatos</button>
             </div>
             <Card filter={filter} />
         </>

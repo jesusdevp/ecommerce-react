@@ -10,6 +10,6 @@ export const deleteProductCart = (product) => ({
     payload: product
 })
 
-export const limipiarCarrito = () => ({
-    type: types.limipiarCarrito
+export const limpiarCarrito = () => ({
+    type: types.limpiarCarrito
 })

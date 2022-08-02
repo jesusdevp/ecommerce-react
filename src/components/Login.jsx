@@ -58,7 +58,7 @@ export const Login = () => {
         <div className='mt-5' style={{ display: 'flex', justifyContent: 'center', margin: '0 auto', height: '80vh' }}>
             <form className='mt-5' onSubmit={handleLogin} >
                 <div className="form-group mb-3">
-                    <label for="email">Email address:</label>
+                    <label htmlFor="email">Email address:</label>
                     <input
                         value={email}
                         onChange={handleInputChange}
@@ -68,7 +68,7 @@ export const Login = () => {
                         id="email" />
                 </div>
                 <div className="form-group mb-3">
-                    <label for="pwd">Contraseña:</label>
+                    <label htmlFor="pwd">Contraseña:</label>
                     <input
                         value={password}
                         onChange={handleInputChange}
@@ -84,7 +84,7 @@ export const Login = () => {
                 <button onClick={handleLogin} onSubmit={handleLogin} type="submit" className="btn btn-primary w-100">Iniciar</button>
             </form>
 
-        </div>
+        </div >
     </>
     )
 }
